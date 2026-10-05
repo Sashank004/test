@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+</head>
+<body>
+    {% if submitted %}
+        <h1>Registration Successful!</h1>
+        <p>Thank you, {{ name }}.</p>
+        <p>Your registration has been submitted successfully.</p>
+        <h3>Registration Details</h3>
+        <p>Name: {{ name }}</p>
+        <p>Email: {{ email }}</p>
+        <p>Age: {{ age }}</p>
+    {% else %}
+        <h1>Event Registration Form</h1>
+        <form method="POST">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+            <br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required>
+            <br><br>
+            <label>Age:</label>
+            <input type="number" name="age" required>
+            <br><br>
+            <button type="submit">Register</button>
+        </form>
+    {% endif %}
+</body>
+</html>
